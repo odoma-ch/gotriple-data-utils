@@ -1,0 +1,6 @@
+pandas
+numpy
+tqdm
+python-dotenv
+pypdf2
+black
