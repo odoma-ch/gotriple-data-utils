@@ -7,6 +7,54 @@ selected_discipline_map = {
     "socio": "Sociology",
 }
 
+non_selected_discipline_map = {
+    "philo": "Philosophy",
+    "lang": "Linguistics",
+    "edu": "Education",
+    "psy": "Psychology",
+    "scipo": "Political Science",
+    "geo": "Geography",
+    "eco": "Economies and Finances",
+    "musiq": "Musicology and Performing Arts",
+    "litt": "Literature",
+    "manag": "Management",
+    "art": "Art and Art History",
+    "droit": "Law",
+    "info": "Communication Sciences",
+    "demo": "Demography",
+    "hisphilso": "History, Philosophy and Sociology of Sciences",
+    "anthro-se": "Social Anthropology and Ethnology",
+    "stat": "Methods and Statistics",
+    "genre": "Gender Studies",
+    "class": "Classical Studies",
+    "museo": "Cultural Heritage and Museology",
+    "anthro-bio": "Biological Anthropology"
+}
+
+non_selected_discipline_map = {
+    "phil": "Philosophy",
+    "lang": "Linguistics",
+    "edu": "Education",
+    "psy": "Psychology",
+    "scipo": "Political Science",
+    "geo": "Geography",
+    "eco": "Economies and Finances",
+    "musiq": "Musicology and Performing Arts",
+    "litt": "Literature",
+    "manag": "Management",
+    "art": "Art and Art History",
+    "droit": "Law",
+    "info": "Communication Sciences",
+    "demo": "Demography",
+    "hisphilso": "History, Philosophy and Sociology of Sciences",
+    "anthro-se": "Social Anthropology and Ethnology",
+    "stat": "Methods and Statistics",
+    "genre": "Gender Studies",
+    "class": "Classical Studies",
+    "museo": "Cultural Heritage and Museology",
+    "anthro-bio": "Biological Anthropology"
+}
+
 language_code_map = {
     "ar": "Arabic",
     "it": "Italian",
@@ -36,6 +84,6 @@ language_code_map = {
     "da": "Danish",
 }
 
-TOPICS = [_ for _ in selected_discipline_map]
+TOPICS = [_ for _ in non_selected_discipline_map]
 LANGUAGES = [_ for _ in language_code_map]
 HAS_PDF_PARAMS = True

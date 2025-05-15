@@ -1,6 +1,6 @@
 import os
 import requests
-
+from tqdm import tqdm
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,7 +28,8 @@ def get_list_of_years(
     """
     year_metadata_per_discipline = dict()
 
-    for row in topics_languages:
+    for row_index in tqdm(range(len(topics_languages))):
+        row = topics_languages[row_index]
         t, l, c_a = row[0], row[1], row[2]
         fq_prefix = f"topic={t};in_language={l};conditions_of_access={c_a}"
         aggs_suffix = "datestamp,size=18000" if with_datestamp else "year,size=100"
