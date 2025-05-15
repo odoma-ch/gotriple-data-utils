@@ -154,6 +154,8 @@ def merge_discipline_jsons_to_jsonl(root_dir: str) -> None:
 
     for discipline in os.listdir(root_dir):
         discipline_dir = os.path.join(root_dir, discipline)
+        if not os.path.isdir(discipline_dir):
+            continue
         output_file = os.path.join(root_dir, f"{discipline}_merged.jsonl.gz")
         logging.info(f"Processing discipline: {discipline}")
 
