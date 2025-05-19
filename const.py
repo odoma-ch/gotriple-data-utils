@@ -8,7 +8,7 @@ selected_discipline_map = {
 }
 
 non_selected_discipline_map = {
-    "philo": "Philosophy",
+    "phil": "Philosophy",
     "lang": "Linguistics",
     "edu": "Education",
     "psy": "Psychology",

@@ -15,9 +15,9 @@ from aggregation_by_year import get_list_of_years
 from const import TOPICS, LANGUAGES, HAS_PDF_PARAMS
 from methods import (
     store_metadata,
-    merge_discipline_jsons_to_jsonl,
     save_discipline_pdfs,
 )
+from file_merger import merge_discipline_jsons_to_jsonl
 
 
 # open parallel process equal to the number of topics, years and languages
@@ -107,12 +107,13 @@ if len(elements) > 0:
 else:
     logging.info("No combinations above threshold")
 
-num_processes = int(os.getenv("NUM_PROCESSES"))
-with Pool(num_processes) as pool:
-    # Map the function to all items
-    results = pool.map(store_metadata, tly_combinations)
+if __name__ == "__main__":
+    num_processes = int(os.getenv("NUM_PROCESSES"))
+    with Pool(num_processes) as pool:
+        # Map the function to all items
+        results = pool.map(store_metadata, tly_combinations)
 
-# merge_discipline_jsons_to_jsonl(os.getenv("STORAGE_LOCAL_PATH"))
-# for _ in ["archeo"]:
-#     logging.info(f"Starting to save PDFs for discipline: {_}")
-#     save_discipline_pdfs(_)
+    # merge_discipline_jsons_to_jsonl(os.getenv("STORAGE_LOCAL_PATH"))
+    # for _ in ["archeo"]:
+    #     logging.info(f"Starting to save PDFs for discipline: {_}")
+    #     save_discipline_pdfs(_)
