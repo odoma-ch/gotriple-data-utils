@@ -2,8 +2,8 @@
 
 ## Description
 
-This dataset contains metadata of all publications in GoTriple having a full-text link (as of {date}). 
-The dataset was created on {date}, thus it contains anything ingested into GoTriple before that date.
+This dataset contains metadata of all publications in GoTriple having a full-text link (as of 18.5.2025). 
+The dataset was created on 18.5.2025, thus it contains anything ingested into GoTriple before that date.
 It was created by means of the [`gotriple-data-utils`](https://github.com/odoma-ch/gotriple-data-utils), a collection of Python scripts to query the GoTriple API.
 
 ## Data packaging
